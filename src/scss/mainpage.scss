@@ -1,4 +1,5 @@
-.page {
+.page {	//!!!
+	padding-bottom: 150px;
 }
 .main-screen {
 
@@ -43,5 +44,77 @@
 		&__button {
 		}
 }
-.button {
+
+// why-choose ====================================================================================================//
+
+.why-choose {
+	@include adaptiveValue("padding-top", 80, 40);
+
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue("padding-bottom", 60, 30);
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		gap: 14px;
+		@include adaptiveValue("gap", 14, 10, 1420, 992, 2);
+		@include adaptiveValue("gap", 14, 5, 992, 320, 1);
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__column {
+		flex: 0 1 20%;
+		@media (max-width: 992px) {
+			flex: 0 1 49%;
+		}
+		@media (max-width: 550px) {
+			flex: 0 1 100%;
+		}
+		//padding: 35px 25px;
+		@include adaptiveValue("padding-top", 35, 20, 1420, 992, 2);
+		@include adaptiveValue("padding-bottom", 35, 20, 1420, 992, 2);
+		@include adaptiveValue("padding-right", 25, 10, 1420, 992, 2);
+		@include adaptiveValue("padding-left", 25, 10, 1420, 992, 2);
+
+		@media (max-width: 992px) {
+		@include adaptiveValue("padding-top", 35, 20, 992, 320, 1);
+		@include adaptiveValue("padding-bottom", 35, 20, 992, 320, 1);
+		@include adaptiveValue("padding-right", 25, 10, 992, 320, 1);
+		@include adaptiveValue("padding-left", 25, 10, 992, 320, 1);
+		}
+
+	}
+}
+.column-why-choose {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 24, 10, 1420, 992, 2);
+	@media (max-width: 992px) {
+		@include adaptiveValue("gap", 24, 15, 992, 320, 1);
+	}
+	border: 1px solid #A8A8A8;
+	border-radius: 8px;
+
+	&__icon {
+		img {
+			max-width: 27px;
+		}
+	}
+
+	&__text {
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 140%;
+		color: #393838;
+		span {
+			color: #27AE60;
+		}
+	}
 }
