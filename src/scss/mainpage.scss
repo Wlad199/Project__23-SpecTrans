@@ -1,0 +1,48 @@
+.page {
+}
+.main-screen {
+
+	&__image-ibg {
+		img {
+			object-position: 80% bottom;
+			@media (max-width: 1200px) {
+				opacity: 0.6;
+			}
+		}
+	}
+
+		&__container {
+			position: relative;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&__body {
+			max-width: 770px;
+		}
+
+		&__title {
+			padding: 100px 0px 0px 0px;
+			//@include adaptiveValue("padding-top", 250, 0);
+			font-weight: 700;
+			color: #000;
+			@include adaptiveValue("font-size", 60, 30);
+			line-height: 118.333333%; /* 71/60 */
+			@include adaptiveValue("padding-bottom", 30, 20);
+			
+		}
+
+		&__text {
+			@include adaptiveValue("font-size", 20, 16);
+			line-height: 140%;
+			color: #000;
+			@include adaptiveValue("padding-bottom", 60, 30);
+		}
+
+		&__button {
+		}
+}
+.button {
+}

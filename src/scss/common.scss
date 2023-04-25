@@ -2,11 +2,15 @@
 // button ====================================================================================================//
 
 .button {
-	padding: 20px 36px;
+	display: inline-block;
+	@include adaptiveValue("padding-top", 20, 15);
+	@include adaptiveValue("padding-bottom", 20, 15);
+	@include adaptiveValue("padding-left", 36, 20);
+	@include adaptiveValue("padding-right", 36, 20);
 	background-color: $green;
 	border-radius: 8px;
 	font-weight: 500;
-	font-size: 22px;
+	@include adaptiveValue("font-size", 22, 16);
 	line-height: 118.181818%; /* 26/22 */
 	color: #fff;
 	transition: all 0.3s ease 0s;

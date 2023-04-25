@@ -5,7 +5,6 @@ body._lock {
 	overflow: hidden;
 }
 
-
 @media (max-width: $mobile) {
 	.menu__body {
 		position: fixed;
@@ -28,11 +27,21 @@ body._lock {
 //  ====================================================================================================//
 
 .header {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
 
-	&__container {}
 
+	&__container {
+		position: relative;
+	}
+	
+	&__body {
+	}
+	
 	&__menu {
-		position: fixed;
 		position: relative;
 		@include adaptiveValue("padding-top", 45, 0, 1420, 767, 2);
 		@include adaptiveValue("padding-bottom", 45, 0, 1420, 767, 2);
@@ -50,7 +59,6 @@ body._lock {
 		position: relative;
 		z-index: 5;
 		@include adaptiveValue("padding-right", 95, 10, 1420, 767, 2);
-
 		img {
 			max-width: 100%;
 			@media (max-width: 992px) {
@@ -75,7 +83,7 @@ body._lock {
 		}
 		@media (max-width: 767px) {
 			li:not(:last-child){
-				margin: 0px 0px 45px 0px;
+				margin: 0px 0px 30px 0px;
 			}
 		}
 	}
@@ -94,6 +102,10 @@ body._lock {
 		@media (min-width: 767px) {
 			display: none;
 		}
+	}
+
+	&__button {
+	margin-top: 50px;
 	}
 }
 
@@ -123,7 +135,6 @@ body._lock {
 
 	&__burger {
 		display: none;
-
 		@media (max-width: 767px) {
 			display: flex;
 		}
@@ -134,7 +145,6 @@ body._lock {
 	}
 }
 .menu__icon._active {
-
 	.icon__cross {
 		@media (max-width: 767px) {
 			display: flex;
