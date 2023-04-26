@@ -1,5 +1,5 @@
-.page {	//!!!
-	padding-bottom: 150px;
+.page {
+	@include adaptiveValue("padding-bottom", 65, 40);
 }
 .main-screen {
 

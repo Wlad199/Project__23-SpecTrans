@@ -1,3 +1,129 @@
-//====================================================================================================
+.footer {
+	background-color: #424141;
+	@include adaptiveValue("padding-top", 35, 20);
+	@include adaptiveValue("padding-bottom", 35, 20);
 
-//====================================================================================================
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0px -15px;
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__left {
+		padding: 0px 15px;
+		flex: 0 1 50%;
+		display: flex;
+		align-items: center;
+		@media (max-width: 992px) {
+			flex: 0 1 100%;
+			justify-content: center;
+		}
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__right {
+		padding: 0px 15px;
+		flex: 0 1 50%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: 992px) {
+			flex: 0 1 100%;
+			justify-content: center;
+			//order: 1;
+		}
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}
+	}
+
+	&__logo {
+		@include adaptiveValue("padding-right", 54, 15);
+		@media (max-width: 500px) {
+			padding-bottom: 10px;
+		}
+	}
+
+	&__copy {
+		color: #fff;
+		opacity: 0.6;
+		font-size: 12px;
+		text-align: center;
+		@media (max-width: 992px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		padding-right: 15px;
+		li:not(:last-child){
+			@include adaptiveValue("padding-right", 50, 20);
+		}
+		@media (max-width: 992px) {
+			padding-bottom: 20px;
+		}
+		@media (max-width: 500px) {
+			padding-bottom: 20px;
+		}
+	}
+
+	&__link {
+		@include adaptiveValue("font-size", 18, 16);
+		line-height: 120%;
+		color: #fff;
+		opacity: 0.6;
+		transition: all 0.3s ease 0s;
+		&:hover{
+			color: $green;
+		}
+	}
+
+	&__contact {
+	}
+}
+
+.contact-footer {
+	display: flex;
+	align-items: center;
+	@media (max-width: 500px) {
+		padding-bottom: 10px;
+	}
+
+
+	&__icon {
+		&:not(:last-child){
+			@include adaptiveValue("margin-right", 30, 15);
+		}
+		transition: all 0.3s ease 0s;
+		&:hover {
+			transform: scale(1.3);
+		}
+	}
+
+	&__button {
+		font-size: 12px;
+		line-height: 100%;
+		color: #fff;
+		border: 1px solid #FFFFFF;
+		min-width: 154px;
+		min-height: 42px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			border: 1px solid #bcbcbc;
+			color: #bcbcbc;
+		}
+	}
+}
