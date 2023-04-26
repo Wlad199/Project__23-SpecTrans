@@ -45,6 +45,15 @@
 	line-height: 142%;
 }
 
+//  text_l ====================================================================================================//
+
+.text_l {
+	font-weight: 300;
+	@include adaptiveValue("font-size", 16, 14);
+	line-height: 140%;
+	color: #1E1E1C;
+}
+
 
 .form {
 }

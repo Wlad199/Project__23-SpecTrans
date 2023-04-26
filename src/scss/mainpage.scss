@@ -325,9 +325,6 @@
 
 .content-questions {
 	max-width: 490px;
-	@media (max-width: 767px) {
-		@include adaptiveValue("padding-bottom", 50, 30, 767, 320, 1);
-	}
 
 	&__title {
 		@include adaptiveValue("padding-top", 90, 40);
@@ -407,11 +404,103 @@
 			resize: none;
 		}
 	}
-
-	&__button {
-	}
 }
 
 .form-questions__form ._form-focus{
 	color: #000;
+}
+
+// delivery ====================================================================================================//
+
+.delivery {
+	@media (min-width: 767px) {
+		display: flex;
+	}
+
+	&__content {
+		flex: 0 0 100%;
+	}
+
+	&__image {
+		display: flex;
+		iframe {
+			width: 100%;
+		}
+		@media (min-width: 767px) {
+			flex: 0 0 50%;
+			transform: translate(-100%, 0);
+		}
+		@media (max-width: 766.98px) {
+			@include adaptiveValue("height", 500, 200, 767, 320, 1);
+		}
+	}
+}
+
+
+.content-delivery {
+	@media (max-width: 767px) {
+		@include adaptiveValue("padding-bottom", 60, 40, 767, 320, 1);
+	}
+
+	&__container {
+	}
+
+	&__body {
+		@include adaptiveValue("padding-top", 40, 30);
+		@media (min-width: 767px) {
+			padding-right: 20px;
+			width: 50%;
+		}
+	}
+
+	&__title {
+		@include adaptiveValue("padding-bottom", 30, 20);
+	}
+
+	&__text {
+		@include adaptiveValue("padding-bottom", 50, 30);
+	}
+
+	&__list { 
+		@include adaptiveValue("padding-bottom", 180, 40, 1420, 767, 1);
+	}
+
+	&__item {
+		&:not(:last-child){
+			@include adaptiveValue("padding-bottom", 60, 20);
+		}
+		padding-left: 35px;
+		background: url('@img/delivery/icon/01.svg') 0px -1px no-repeat;
+	}
+
+	&__contact {
+	}
+}
+
+.contact-delivery {
+	display: flex;
+	@include adaptiveValue("gap", 20, 10);
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 50%;
+		background-color: #F8F8F8;
+		@include adaptiveValue("padding-top", 70, 20);
+		@include adaptiveValue("padding-bottom", 70, 20);
+		text-align: center;
+
+	}
+
+	&__title {
+		flex: 1 1 auto;
+		@include adaptiveValue("font-size", 18, 16);
+		font-weight: 500;
+		line-height: 100%;
+		color: #393838;
+		@include adaptiveValue("padding-bottom", 24, 15);
+	}
+
+	&__text {
+	}
 }
