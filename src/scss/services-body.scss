@@ -1,0 +1,99 @@
+.page {
+}
+
+.services-questions {
+	margin-top: 20px;
+}
+
+.services {
+	@include adaptiveValue("padding-top", 200, 100);
+
+		&__container {
+		}
+
+		&__body {
+		}
+
+		&__card {
+			display: flex;
+			align-items: center;
+			@include adaptiveValue("gap", 40, 15, 1420, 767, 1);
+			&:not(:last-child){
+				@include adaptiveValue("padding-bottom", 60, 40);
+			}
+			@media (max-width: 767px) {
+				flex-wrap: wrap;
+			}
+		}
+}
+.card-services {
+
+		&__image {
+			flex: 0 1 50%;
+			img {
+				max-width: 100%;
+			}
+			@media (max-width: 767px) {
+				flex: 0 1 100%;
+				order: 2;
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		&__content {
+			flex: 0 1 50%;
+			@media (max-width: 767px) {
+				flex: 0 1 100%;
+				order: 1;
+			}
+		}
+
+		&__title {
+			@include adaptiveValue("padding-bottom", 30, 20);
+		}
+
+		&__text {
+			@include adaptiveValue("padding-bottom", 60, 20);
+		}
+
+		&__prises {
+		}
+}
+
+.prices-services {
+
+		&__list {
+		}
+
+		&__item {
+			display: flex;
+			justify-content: space-between;
+			max-width: 600px;
+			@include adaptiveValue("padding-bottom", 20, 15);
+		}
+
+		&__goods {
+			@include adaptiveValue("font-size", 16, 13);
+			font-weight: 300;
+			line-height: 130%;
+			color: #1D1D1B;
+			//flex: 0 1 auto;
+			//display: inline-flex;
+		}
+
+		&__price {
+			@include adaptiveValue("font-size", 16, 13);
+			font-weight: 400;
+			line-height: 130%;
+			color: #1D1D1B;
+			span {
+				color: $green;
+			}
+		}
+		&__decore {
+			border-bottom: 1px solid #CCCCCC;
+			flex: 1 1 auto;
+		}
+}

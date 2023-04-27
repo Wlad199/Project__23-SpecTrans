@@ -1,5 +1,4 @@
 .page {
-	@include adaptiveValue("padding-bottom", 65, 40);
 }
 .main-screen {
 
@@ -413,6 +412,7 @@
 // delivery ====================================================================================================//
 
 .delivery {
+	@include adaptiveValue("padding-bottom", 65, 40);
 	@media (min-width: 767px) {
 		display: flex;
 	}
