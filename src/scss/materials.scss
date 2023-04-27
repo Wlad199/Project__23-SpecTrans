@@ -1,35 +1,65 @@
-.page {
-}
+
+//  ====================================================================================================//
+
 .materials {
 	@include adaptiveValue("padding-top", 200, 100);
 
-		&__container {
+	&__container {
+	}
+
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+		margin: 0px -10px;
+		border-bottom: 1px solid #b1b1b1;
+		@include adaptiveValue("padding-bottom", 15, 10);
+		@include adaptiveValue("margin-bottom", 90, 30);
+	}
+
+	&__title {
+		padding: 0px 10px;
+		font-weight: 300;
+		@include adaptiveValue("font-size", 24, 13);
+		line-height: 116.666667%; /* 28/24 */
+		color: #1D1D1B99;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			color: $green;
 		}
+	}
+	.materials__title._tab-active {
+		color: $green;
+	}
+
+	&__content {
+	}
+
+	&__body {
+	}
 }
+
 .services {
 
-		&__body {
-		}
-
-		&__card {
-		}
+	&__card {
+	}
 }
+
 .card-services {
 
-		&__image {
-		}
+	&__image {
+	}
 
-		&__content {
-		}
+	&__content {
+	}
 
-		&__title {
-		}
+	&__title {
+	}
 
-		&__text {
-		}
+	&__text {
+	}
 
-		&__prises {
-		}
+	&__prises {
+	}
 }
 .title {
 }
@@ -37,18 +67,18 @@
 }
 .prices-services {
 
-		&__list {
-		}
+	&__list {
+	}
 
-		&__item {
-		}
+	&__item {
+	}
 
-		&__goods {
-		}
+	&__goods {
+	}
 
-		&__decore {
-		}
+	&__decore {
+	}
 
-		&__price {
-		}
+	&__price {
+	}
 }

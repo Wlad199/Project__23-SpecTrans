@@ -107,8 +107,8 @@
 		justify-content: center;
 		transition: all 0.3s ease 0s;
 		&:hover {
-			border: 1px solid #bcbcbc;
-			color: #bcbcbc;
+			border: 1px solid $green;
+			color: $green;
 		}
 		@media (max-width: 400px) {
 			min-width: 120px;
