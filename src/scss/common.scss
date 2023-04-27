@@ -55,9 +55,17 @@
 }
 
 
-.form {
-}
-.input {
-}
-.button {
+// popup__close ====================================================================================================//
+
+.popup__close {
+	margin: 0 right;
+	font-size: 16px;
+	color: #fff;
+	padding: 10px 20px;
+	background-color: #e11809;
+	border-radius: 5px;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background-color: #b11407;
+	}
 }
