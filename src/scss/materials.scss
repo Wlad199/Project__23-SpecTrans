@@ -1,0 +1,54 @@
+.page {
+}
+.materials {
+	@include adaptiveValue("padding-top", 200, 100);
+
+		&__container {
+		}
+}
+.services {
+
+		&__body {
+		}
+
+		&__card {
+		}
+}
+.card-services {
+
+		&__image {
+		}
+
+		&__content {
+		}
+
+		&__title {
+		}
+
+		&__text {
+		}
+
+		&__prises {
+		}
+}
+.title {
+}
+.text {
+}
+.prices-services {
+
+		&__list {
+		}
+
+		&__item {
+		}
+
+		&__goods {
+		}
+
+		&__decore {
+		}
+
+		&__price {
+		}
+}
